@@ -1,5 +1,9 @@
 import numpy as np
 def longestPalindrome_DP(s):
+    '''
+    Cannot solve the situation when the string is too long
+    because of the large memory usage. T_T
+    '''
     if not s:
             return ""
     if len(s)<2 or s==s[::-1]:
@@ -33,6 +37,11 @@ def longestPalindrome_DP(s):
             for j in range(length):
                 if array[i][j]==max_length:
                     return s[i:j]
+
+def longestPalindrome_CE(s):
+    '''
+    The center expansion algorithm for longest palindrome problem.
+    '''
 
 if __name__ == "__main__":
     print(longestPalindrome_DP("dsfhhgafusihhasdhjzh"))
