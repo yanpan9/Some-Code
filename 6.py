@@ -1,6 +1,6 @@
 # ZigZag Conversion 1
 
-class Solution:
+class Solution_1:
     def convert(self, s: str, numRows: int) -> str:
         if not s:
             return ""
@@ -27,19 +27,19 @@ class Solution:
 
 # ZigZag Conversion 2
 
-class Solution:
+class Solution_2:
     def convert(self, s: str, numRows: int) -> str:
         if not s or numRows==1:
             return s
         rows = [list() for _ in range(numRows)]
         row_idx = 0
         dire = 1
-        for idx,char in enumerate(s):
+        for char in s:
             rows[row_idx].append(char)
             row_idx+=dire
             if row_idx==numRows-1:
                 dire = -1
-            if row_idx==0:
+            elif row_idx==0:
                 dire = 1
         rows = ["".join(row) for row in rows]
         return "".join(rows)
