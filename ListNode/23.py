@@ -1,11 +1,5 @@
 from data_structure import ListNode
 
-# Definition for singly-linked list.
-# class ListNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
-
 class Solution:
     def mergeKLists(self, lists):
         def adjustHeap(lists, i, length):
@@ -40,4 +34,4 @@ class Solution:
         else:
             cur.next = lists[0]
             return head.next
-            
+
