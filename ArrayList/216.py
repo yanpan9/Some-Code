@@ -1,7 +1,7 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         res = list()
-        nums = list(range(1,10))
+        nums = list(range(1,10 if n>10 else n))
         def dfs(lst, k, sum_, nums):
             if k == 0:
                 if sum_ == n:
