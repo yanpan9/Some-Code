@@ -12,4 +12,3 @@ class Solution:
                         lst.pop()
         dfs([], 0, candidates)
         return res
-                    
