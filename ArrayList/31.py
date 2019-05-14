@@ -15,4 +15,4 @@ class Solution:
                 nums[i-1], nums[mark-1] = nums[mark-1], nums[i-1]
                 break
         for i in range((length-index)//2):
-            nums[index+i], nums[-i-1] = nums[-i-1], nums[index+i]i
+            nums[index+i], nums[-i-1] = nums[-i-1], nums[index+i]
