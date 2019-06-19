@@ -24,3 +24,24 @@ class Solution:
                         if c:
                             queue.append(c)
         return depth
+
+class Solution_Backtracking:
+    def isBalanced(self, root: TreeNode) -> bool:
+        if root:
+            return bool(self._isBalanced(root))
+        else:
+            return True
+    
+    def _isBalanced(self, root: TreeNode) -> int:
+        if root:
+            sub_set = {-1,0,1}
+            left = self._isBalanced(root.left)
+            if not left: return left
+            right = self._isBalanced(root.right)
+            if not right: return right
+            if left-right in sub_set:
+                return max(left, right)+1
+            else:
+                return 0
+        else:
+            return 1
