@@ -9,7 +9,6 @@ class Solution:
             # Traverse element which need to be rotate
             # in the row
             for j in range(i, n-1-i):
-                pixel = (i,j)
                 cache = matrix[i][j]
                 for _ in range(4):
                     i, j = j, n-1-i
