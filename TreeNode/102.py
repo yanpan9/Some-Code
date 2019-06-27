@@ -1,3 +1,4 @@
+from typing import List
 from data_structure import TreeNode
 
 class Solution:

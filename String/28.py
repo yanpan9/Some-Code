@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_Bruteforce:
     def strStr(self, haystack: str, needle: str) -> int:
         if not needle:

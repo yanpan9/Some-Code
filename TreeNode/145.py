@@ -1,4 +1,5 @@
 from data_structure import TreeNode
+from typing import List
 
 class Solution_Recur:
     def postorderTraversal(self, root: TreeNode) -> List[int]:

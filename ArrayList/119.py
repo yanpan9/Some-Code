@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_Normal:
     def getRow(self, rowIndex: int) -> List[int]:
         if rowIndex<=1:

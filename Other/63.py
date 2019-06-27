@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_Low_Space:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         m, n = len(obstacleGrid), len(obstacleGrid[0])

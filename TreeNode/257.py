@@ -1,4 +1,5 @@
 from data_structure import TreeNode
+from typing import List
 
 class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:

@@ -1,5 +1,6 @@
 from data_structure import Node
 from collections import deque
+from typing import List
 
 class Solution:
     def levelOrder(self, root: 'Node') -> List[List[int]]:

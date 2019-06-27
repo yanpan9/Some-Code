@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_1:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
         res = list()

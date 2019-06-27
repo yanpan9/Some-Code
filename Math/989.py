@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def addToArrayForm(self, A: List[int], K: int) -> List[int]:
         len_a = len(A)

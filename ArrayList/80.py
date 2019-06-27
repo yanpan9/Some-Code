@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_Double_Point:
     def removeDuplicates(self, nums: List[int]) -> int:
         length = len(nums)

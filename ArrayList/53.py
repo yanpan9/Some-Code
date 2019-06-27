@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         max_ending_here, max_so_far = nums[0], nums[0]

@@ -1,5 +1,6 @@
 from data_structure import TreeNode
 from collections import deque
+from typing import List
 
 class Solution:
     def zigzagLevelOrder(self, root: TreeNode) -> List[List[int]]:

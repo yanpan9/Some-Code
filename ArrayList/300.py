@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_DP:
     def lengthOfLIS(self, nums: List[int]) -> int:
         res = 0

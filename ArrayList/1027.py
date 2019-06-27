@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def longestArithSeqLength(self, A: List[int]) -> int:
         length = len(A) 

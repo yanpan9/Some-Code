@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution_DFS:
     def letterCombinations(self, digits: str) -> List[str]:
         result = list()
