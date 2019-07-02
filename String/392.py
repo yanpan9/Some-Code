@@ -9,3 +9,15 @@ class Solution_DP:
                 else:
                     dp[i_s][i_t]=max(dp[i_s-1][i_t], dp[i_s][i_t-1])
         return dp[-1][-1]==len(s)
+
+class Solution_Greedy:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        len_s, len_t = len(s), len(t)
+        i_s, i_t = 0, 0
+        while i_s<len_s and i_t<len_t:
+            if s[i_s]==t[i_t]:
+                i_s += 1
+                i_t += 1
+            else:
+                i_t += 1
+        return i_s==len_s
