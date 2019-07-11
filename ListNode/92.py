@@ -23,3 +23,22 @@ class Solution:
             head.next = node
             node = temp
         return dummy.next
+
+class Solution_LeetCode:
+    def reverseBetween(self, head: ListNode, m: int, n: int) -> ListNode:
+        dummy = ListNode(None)
+        dummy.next = head
+        prev, cur = dummy, head
+        i = 1
+        while i<m:
+            prev, cur = cur, cur.next
+            i += 1
+        head, tail = prev, cur
+        while i<=n:
+            next_node = cur.next
+            cur.next = prev
+            prev, cur = cur, next_node
+            i += 1
+        head.next = prev
+        tail.next = cur
+        return dummy.next
