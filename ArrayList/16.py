@@ -4,7 +4,7 @@ from operator import add,sub
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
         nums.sort()
-        res = 2**32-1
+        res = 2**31-1
         idx,length = 0,len(nums)
         while idx<length-2:
             val = nums[idx]
