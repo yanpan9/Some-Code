@@ -28,7 +28,6 @@ class MyStack:
         Get the top element.
         """
         return self.queue[0]
-        
 
     def empty(self) -> bool:
         """
