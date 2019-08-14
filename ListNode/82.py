@@ -4,14 +4,14 @@ class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
         dummy = ListNode(None)
         dummy.next = head
-        cur = dummy
-        while cur.next and cur.next.next:
-            node = cur.next
-            if node.val==node.next.val:
-                val = node.val
-                while node and node.val==val:
+        pre, cur = dummy, head
+        while cur and cur.next:
+            if cur.val==cur.next.val:
+                node = cur.next.next
+                while node and node.val==cur.val:
                     node = node.next
-                cur.next = node
+                pre.next = node
+                cur = node
             else:
-                cur = cur.next
+                pre, cur = cur, cur.next
         return dummy.next
