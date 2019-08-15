@@ -16,3 +16,9 @@ class Node:
     def __init__(self, val, children):
         self.val = val
         self.children = children
+
+class RandomListNode:
+    def __init__(self, val, next, random):
+        self.val = val
+        self.next = next
+        self.random = random
