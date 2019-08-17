@@ -34,19 +34,19 @@ class Solution_MinHeap:
         counter = Counter(nums)
         array = [(0,0) for _ in range(k)]
         for key in counter:
-            if counter[key]>array[0][1]:
-                array[0] = (key, counter[key])
-                self.adjustHeap(array, 0, k, key=lambda x:x[1])
-        res = sorted(array, key=lambda x:x[1], reverse=True)
-        return [i[0] for i in res]
+            if counter[key]>array[0][0]:
+                array[0] = (counter[key], key)
+                self.adjustHeap(array, 0, k)
+        res = sorted(array, key=lambda x:x[0], reverse=True)
+        return [i[1] for i in res]
             
-    def adjustHeap(self, heap, i, length, key=lambda x:x):
+    def adjustHeap(self, heap, i, length):
         val = heap[i]
         while 2*i+1<length:
             idx = 2*i+1
-            if idx+1<length and key(heap[idx+1])<key(heap[idx]):
+            if idx+1<length and heap[idx+1]<heap[idx]:
                 idx += 1
-            if key(heap[idx])<key(val):
+            if heap[idx]<val:
                 heap[i] = heap[idx]
                 i = idx
             else:
