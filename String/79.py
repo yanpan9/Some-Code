@@ -29,6 +29,7 @@ class Solution:
                 nx, ny = x+dx, y+dy
                 if nx>=0 and nx<self.m and ny>=0 and ny<self.n:
                     if (nx,ny) not in lst and board[nx][ny]==self.word[w_idx]:
+                        # you can use flag to check the location
                         lst.append((nx,ny))
                         if self.dfs(board, lst, w_idx+1):
                             return True
