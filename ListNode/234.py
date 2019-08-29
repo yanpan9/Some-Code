@@ -2,10 +2,6 @@ from data_structure import ListNode
 
 class Solution(object):
     def isPalindrome(self, head: ListNode) -> bool:
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
         dummy1, dummy2 = ListNode(None), ListNode(None)
         dummy1.next = head
         slow = fast = dummy1
